@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Gallery</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #image-container {
+            max-width: 80%;
+            max-height: 80%;
+            cursor: pointer;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img id="display-image" src="/api/placeholder/400/300" alt="Gallery Image">
+    </div>
+
+    <script>
+        const imageContainer = document.getElementById('image-container');
+        const displayImage = document.getElementById('display-image');
+        
+        // TODO: Replace these placeholder URLs with your actual image filenames
+        // For example:
+        // const images = [
+        //     'image1.jpg',
+        //     'image2.png',
+        //     'image3.gif',
+        //     'image4.jpeg'
+        // ];
+        const images = [
+            'NightmareA.png',
+            'NightmareB.png',
+            '/api/placeholder/400/300',
+            '/api/placeholder/400/300'
+        ];
+        
+        let currentIndex = 0;
+
+        imageContainer.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            displayImage.src = images[currentIndex];
+        });
+    </script>
+</body>
+</html>
