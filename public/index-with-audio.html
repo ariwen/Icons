@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery with Audio</title>
+    <style>
+        .row {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .image-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="image-container">
+            <img src="img/cir.png" height="200" width="200"
+                onmouseover="this.src='img/NightmareB.png';"
+                onmouseout="this.src='img/NightmareA.png';"
+                onclick="playAudio('Nightmare')">
+        </div>
+        <div class="image-container">
+            <img src="img/cir.png" height="200" width="200"
+                onmouseover="this.src='img/RomanticB.png';"
+                onmouseout="this.src='img/RomanticA.png';"
+                onclick="playAudio('Romantic')">
+        </div>
+        <div class="image-container">
+            <img src="img/cir.png" height="200" width="200"
+                onmouseover="this.src='img/PropheticB.png';"
+                onmouseout="this.src='img/PropheticA.png';"
+                onclick="playAudio('Prophetic')">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="image-container">
+            <img src="img/cir.png" height="200" width="200"
+                onmouseover="this.src='img/SyncB.png';"
+                onmouseout="this.src='img/SyncA.png';"
+                onclick="playAudio('Sync')">
+        </div>
+        <div class="image-container">
+            <img src="img/cir.png" height="200" width="200"
+                onmouseover="this.src='img/PurchaseB.png';"
+                onmouseout="this.src='img/PurchaseA.png';"
+                onclick="playAudio('Purchase')">
+        </div>
+        <div class="image-container">
+            <img src="img/cir.png" height="200" width="200"
+                onmouseover="this.src='img/MysteryB.png';"
+                onmouseout="this.src='img/MysteryA.png';"
+                onclick="playAudio('Mystery')">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="image-container">
+            <img src="img/cir.png" height="200" width="200"
+                onmouseover="this.src='img/HealingB.png';"
+                onmouseout="this.src='img/HealingA.png';"
+                onclick="playAudio('Healing')">
+        </div>
+        <div class="image-container">
+            <img src="img/cir.png" height="200" width="200"
+                onmouseover="this.src='img/JournalB.png';"
+                onmouseout="this.src='img/JournalA.png';"
+                onclick="playAudio('Journal')">
+        </div>
+        <div class="image-container">
+            <img src="img/cir.png" height="200" width="200"
+                onmouseover="this.src='img/GraphB.png';"
+                onmouseout="this.src='img/GraphA.png';"
+                onclick="playAudio('Graph')">
+        </div>
+    </div>
+
+    <script>
+        function playAudio(audioName) {
+            const audio = new Audio(`audio/${audioName}.mp3`);
+            audio.play();
+        }
+    </script>
+</body>
+</html>
